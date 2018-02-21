@@ -1,0 +1,3 @@
+# Load theme file
+export POWERLEVEL9K_MODE='nerdfont-complete'
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme

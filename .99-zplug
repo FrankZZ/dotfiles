@@ -1,0 +1,12 @@
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    zplug install
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+
+if zplug check zsh-users/zsh-history-substring-search; then
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+fi
