@@ -6,7 +6,12 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+# search on history with ctrl+r
+bindkey '^R' history-incremental-search-backward
+
 if zplug check zsh-users/zsh-history-substring-search; then
-    bindkey '^[[A' history-substring-search-up
-    bindkey '^[[B' history-substring-search-down
+    if [ "$(uname)" = "Darwin" ]; then
+        bindkey '^[[A' history-substring-search-up
+        bindkey '^[[B' history-substring-search-down
+    fi
 fi

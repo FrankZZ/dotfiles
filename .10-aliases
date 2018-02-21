@@ -9,3 +9,11 @@ alias bdcbur="docker-compose up --build --no-color | sed -E -l 's/.*\| //' | bun
 alias bdcbpur="docker-compose pull; docker-compose up --build --no-color | sed -E -l 's/.*\| //' | bunyan; docker-compose rm -f -v"
 alias dcbur="docker-compose up --build"
 alias dclr="docker rm -f -v \$(docker ps -aq)"
+alias week='date +%V'
+alias :q='exit'
+
+[ "${ZSH_UNAME}" = "Darwin" ] && {
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+}
+

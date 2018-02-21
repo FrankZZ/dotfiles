@@ -5,8 +5,11 @@ fi
 
 source ~/.zplug/init.zsh
 export ZSH="${HOME}/.oh-my-zsh"
+export HISTFILE=$HOME/.zsh_history
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Don't show my username on every line in the theme
 DEFAULT_USER="${USER}"
+
+unsetopt NOMATCH
