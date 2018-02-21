@@ -4,7 +4,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load
+zplug load --verbose
 
 # search on history with ctrl+r
 bindkey '^R' history-incremental-search-backward

@@ -4,7 +4,6 @@ zplug "lukechilds/zsh-nvm"
 zplug "lukechilds/zsh-better-npm-completion"
 
 # oh-my-zsh plugins
-zplug "lib/completion", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
