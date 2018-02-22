@@ -12,7 +12,7 @@ alias dclr="docker rm -f -v \$(docker ps -aq)"
 alias week='date +%V'
 alias :q='exit'
 
-[ "${ZSH_UNAME}" = "Darwin" ] && {
+[ "$(uname)" = "Darwin" ] && {
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 }
