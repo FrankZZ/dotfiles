@@ -13,5 +13,6 @@ if zplug check zsh-users/zsh-history-substring-search; then
     if [ "$(uname)" = "Darwin" ]; then
         bindkey '^[[A' history-substring-search-up
         bindkey '^[[B' history-substring-search-down
+        bindkey "\e[3~" delete-char
     fi
 fi
