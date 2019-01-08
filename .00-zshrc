@@ -8,7 +8,8 @@ source ~/.zplug/init.zsh
 
 export ZSH="${HOME}/.oh-my-zsh"
 export HISTFILE=$HOME/.zsh_history
-
+export GOPATH="${HOME}/.go"
+export PATH="${PATH}:${GOPATH//://bin:}/bin"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Don't show my username on every line in the theme
