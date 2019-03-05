@@ -18,3 +18,5 @@ alias bdcbur='docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\''
 alias bdcur='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan && docker-compose rm -f -v'
 alias bdcbu='docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
 alias bdcbu='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+alias bdcl='docker-compose logs -f --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+
