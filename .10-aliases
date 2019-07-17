@@ -1,15 +1,27 @@
 alias ls="ls -la -G"
 alias gc="git commit"
+alias gs="git status"
 alias gcl="git clone"
 alias gd="git diff"
 alias gp="git push origin"
 alias ga="git add"
 alias gr="git reset HEAD"
-alias bdcbur="docker-compose up --build --no-color | sed -E -l 's/.*\| //' | bunyan; docker-compose rm -f -v"
-alias bdcbpur="docker-compose pull; docker-compose up --build --no-color | sed -E -l 's/.*\| //' | bunyan; docker-compose rm -f -v"
-alias dcbur="docker-compose up --build"
-alias dclr="docker rm -f -v \$(docker ps -aq)"
+alias dcbpu='docker-compose pull && docker-compose up --build'
+alias dcbpur='docker-compose pull && docker-compose up --build; docker-compose rm -f -v'
+alias dcbu='docker-compose up --build'
+alias dcbur='docker-compose up --build; docker-compose rm -f -v'
+alias dclr='docker rm -f -v $(docker ps -aq)'
+alias dcp='docker-compose pull'
+alias dcu='docker-compose up'
+alias bdcbpur='docker-compose pull && docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan && docker-compose rm -f -v'
+alias bdcbur='docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan && docker-compose rm -f -v'
+alias bdcur='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan && docker-compose rm -f -v'
+alias bdcbu='docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+alias bdcbu='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+alias bdcl='docker-compose logs -f --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+
 alias week='date +%V'
+alias lpc="lpass show -pcF"
 alias :q='exit'
 
 [ "$(uname)" = "Darwin" ] && {

@@ -12,6 +12,9 @@ export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH//://bin:}/bin"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# tmux
+export TERM="xterm-256color"
+
 # Don't show my username on every line in the theme
 DEFAULT_USER="${USER}"
 
