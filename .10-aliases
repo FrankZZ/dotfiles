@@ -27,5 +27,6 @@ alias :q='exit'
 [ "$(uname)" = "Darwin" ] && {
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
+    alias mma='sudo /usr/sbin/dseditgroup -o edit -a $USERNAME -t user admin'
 }
 
