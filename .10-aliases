@@ -19,6 +19,7 @@ alias bdcur='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan
 alias bdcbu='docker-compose up --build --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
 alias bdcbu='docker-compose up --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
 alias bdcl='docker-compose logs -f --no-color | sed -E -l '\''s/.*\| //'\'' | bunyan'
+alias bdcll='docker-compose logs -f --no-color --tail 10 | sed -E -l '\''s/.*\| //'\'' | bunyan'
 
 alias week='date +%V'
 alias lpc="lpass show -pcF"
