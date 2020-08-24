@@ -18,3 +18,8 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status load ram root_indicator background_jobs time)
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+# emojify and set default pager
+
+export PAGER="zemojify | less"
+
