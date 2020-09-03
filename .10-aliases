@@ -25,6 +25,12 @@ alias week='date +%V'
 alias lpc="lpass show -pcF"
 alias :q='exit'
 
+function ocpf() {
+    local POD_NAME=$(oc get pods | grep -m 1 "$1" | awk '{ print $1 }')
+    echo "Port-forwarding port $2 to pod $POD_NAME"
+    oc port-forward ${POD_NAME} $2
+}
+
 [ "$(uname)" = "Darwin" ] && {
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
